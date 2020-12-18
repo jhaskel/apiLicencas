@@ -41,7 +41,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
             String password = login.getPassword();
 
             if(StringUtils.isEmpty(username) || StringUtils.isEmpty(password)) {
-                throw new BadCredentialsException("Senha ou login incorretos.");
+                throw new BadCredentialsException("Senha ou login incorretos .");
             }
 
             Authentication auth = new UsernamePasswordAuthenticationToken(username, password);
@@ -67,7 +67,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     @Override
     protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response, AuthenticationException error) throws IOException, ServletException {
 
-        String json = ServletUtil.getJson("error", "Login incorreto");
+        String json = ServletUtil.getJson("error", "Login incorreto mano");
         ServletUtil.write(response, HttpStatus.UNAUTHORIZED, json);
     }
 
