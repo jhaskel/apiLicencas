@@ -18,24 +18,18 @@ public class EmpreendedorController {
 
     @GetMapping()
     public ResponseEntity get() {
-        List<EmpreendedorDTO> carros = service.getCarros();
+        List<EmpreendedorDTO> carros = service.getEmpreendedorr();
         return ResponseEntity.ok(carros);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity get(@PathVariable("id") Long id) {
-        EmpreendedorDTO carro = service.getCarroById(id);
+        EmpreendedorDTO carro = service.getEmpreendedorById(id);
 
         return ResponseEntity.ok(carro);
     }
 
-    @GetMapping("/tipo/{tipo}")
-    public ResponseEntity getCarrosByTipo(@PathVariable("tipo") String tipo) {
-        List<EmpreendedorDTO> carros = service.getCarrosByTipo(tipo);
-        return carros.isEmpty() ?
-                ResponseEntity.noContent().build() :
-                ResponseEntity.ok(carros);
-    }
+
 
 
     @PostMapping

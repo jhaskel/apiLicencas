@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface EmpreendedorRepository extends JpaRepository<Empreendedor, Long> {
 
-    List<Empreendedor> findByTipo(String tipo);
+
 }
