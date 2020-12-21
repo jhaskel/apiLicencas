@@ -23,7 +23,7 @@ class EmailController {
 	@ResponseBody
 	public String sendMail(@RequestBody User user) throws MessagingException {
 		emailService.sendMail(user);
-		return "Email Sent Successfully.!";
+		return "Email Sent Successfuklly.!";
 	}
 
 }

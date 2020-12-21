@@ -5,9 +5,10 @@ public class User {
 	private String firstName;
 	
 	private String lastName;
-	
+
 	private String emailAddress;
-	
+	private String tempo;
+
 	public User(){
 		
 	}
@@ -36,4 +37,11 @@ public class User {
 		this.emailAddress = emailAddress;
 	}
 
+	public String getTempo() {
+		return tempo;
+	}
+
+	public void setTempo(String tempo) {
+		this.tempo = tempo;
+	}
 }

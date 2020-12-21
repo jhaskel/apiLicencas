@@ -42,7 +42,7 @@ public class EmailService {
 				"    <title>Email</title>\n" +
 				"</head>\n" +
 				"<body>\n" +
-				"<div>Welcome <b>" + user.getFirstName() + "</b></div>\n" +
+				"<div>Welcome meu <b>" + user.getFirstName() + "</b></div>\n" +
 				"\n" +
 				"<div> Your username is <b>" + user.getLastName() + "</b></div>\n" +
 				"</body>\n" +
