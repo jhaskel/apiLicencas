@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/empreendedor")
+
 public class EmpreendedorController {
     @Autowired
     private EmpreendedorService service;
