@@ -16,28 +16,17 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
+    private String email;
     private String login;
     private String senha;
-    private String email;
     private String urlFoto;
-    private Long cidade;
-    private Long bairro;
-    private Long rua;
+    private Long cpf;
+    private Long recuperar;
     private String celular;
-    private String nascimento;
-    private String genero;
-    private String local;
-    private Long distancia;
-    private Double latitude;
-    private Double longitude;
-    private String tipo;
-    private Long empresa;
-    private String address;
-    private Long quantdicas;
-    private Long quantnoticias;
+    private String role;
     private Boolean ativo;
-    private Long regiao;
-    private String logadoem;
+    private String created;
+    private Boolean modified;
 
 
 

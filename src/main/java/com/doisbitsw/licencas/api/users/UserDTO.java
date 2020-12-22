@@ -14,31 +14,21 @@ import java.util.stream.Collectors;
 public class UserDTO {
     private Long id;
     private String nome;
+    private String email;
     private String login;
     private String senha;
-    private String email;
     private String urlFoto;
-    private Long cidade;
-    private Long bairro;
-    private Long rua;
+    private Long cpf;
+    private Long recuperar;
     private String celular;
-    private String nascimento;
-    private String genero;
-    private String local;
-    private Long distancia;
-    private Double latitude;
-    private Double longitude;
+    private String role;
+    private Boolean ativo;
+    private String created;
+    private Boolean modified;
     // token jwt
     private String token;
-    private String tipo;
-    private Long empresa;
-    private String address;
     private List<String> roles;
-    private Long quantdicas;
-    private Long quantnoticias;
-    private Boolean ativo;
-    private Long regiao;
-    private String logadoem;
+
 
 
     public static UserDTO create(User user) {
