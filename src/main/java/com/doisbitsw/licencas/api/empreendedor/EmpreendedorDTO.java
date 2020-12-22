@@ -7,6 +7,20 @@ import org.modelmapper.ModelMapper;
 public class EmpreendedorDTO {
     private Long id;
     private String nome;
+    private String bairro;
+    private String celular;
+    private String cep;
+    private String cidade;
+    private String complemento;
+    private String cpf;
+    private String created;
+    private String email;
+    private String estado;
+    private String logradouro;
+    private String modified;
+    private String numero;
+    private Boolean ativo;
+
 
 
     public static EmpreendedorDTO create(Empreendedor empreendedor) {
