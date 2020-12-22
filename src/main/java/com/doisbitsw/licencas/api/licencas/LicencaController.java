@@ -39,7 +39,7 @@ public class LicencaController {
 
 
     @PostMapping
-    @Secured({ "ROLE_ADMIN" })
+
     public ResponseEntity post(@RequestBody Licenca licenca) {
 
         LicencaDTO c = service.insert(licenca);

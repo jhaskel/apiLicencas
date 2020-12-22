@@ -21,7 +21,6 @@ public class EmpreendedorController {
         List<EmpreendedorDTO> contato = service.getEmpreendedorr();
         return ResponseEntity.ok(contato);
     }
-
     @PostMapping
     public ResponseEntity post(@RequestBody Empreendedor pontuacao) {
 
