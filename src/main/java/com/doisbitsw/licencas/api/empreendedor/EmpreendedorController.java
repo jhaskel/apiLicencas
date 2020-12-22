@@ -11,20 +11,31 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/empreendedor")
-
 public class EmpreendedorController {
     @Autowired
     private EmpreendedorService service;
 
+
     @GetMapping()
     public ResponseEntity get() {
-        List<EmpreendedorDTO> contato = service.getEmpreendedorr();
-        return ResponseEntity.ok(contato);
+        List<EmpreendedorDTO> empreendedors = service.getCarros();
+        return ResponseEntity.ok(empreendedors);
     }
-    @PostMapping
-    public ResponseEntity post(@RequestBody Empreendedor pontuacao) {
 
-        EmpreendedorDTO c = service.insert(pontuacao);
+    @GetMapping("/{id}")
+    public ResponseEntity get(@PathVariable("id") Long id) {
+        EmpreendedorDTO empreendedor = service.getCarroById(id);
+
+        return ResponseEntity.ok(empreendedor);
+    }
+
+
+
+    @PostMapping
+
+    public ResponseEntity post(@RequestBody Empreendedor empreendedor) {
+
+        EmpreendedorDTO c = service.insert(empreendedor);
 
         URI location = getUri(c.getId());
         return ResponseEntity.created(location).body(c);
@@ -35,12 +46,12 @@ public class EmpreendedorController {
                 .buildAndExpand(id).toUri();
     }
 
-    @PutMapping("/{empreendedor}")
-    public ResponseEntity put(@PathVariable("empreendedor") Long empreendedor, @RequestBody Empreendedor pontuacao) {
+    @PutMapping("/{id}")
+    public ResponseEntity put(@PathVariable("id") Long id, @RequestBody Empreendedor empreendedor) {
 
-        pontuacao.setId(empreendedor);
+        empreendedor.setId(id);
 
-        EmpreendedorDTO c = service.update(pontuacao, empreendedor);
+        EmpreendedorDTO c = service.update(empreendedor, id);
 
         return c != null ?
                 ResponseEntity.ok(c) :

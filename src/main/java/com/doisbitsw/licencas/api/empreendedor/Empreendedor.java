@@ -17,19 +17,9 @@ public class Empreendedor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private String email;
-    private String cpf;
-    private String logradouro;
-    private String numero;
-    private String complemento;
-    private String bairro;
-    private String cep;
-    private String cidade;
-    private String estado;
-    private String celular;
-    private Boolean ativo;
-    private String created;
-    private String modified;
+
+
+
 
 }
 

@@ -15,17 +15,17 @@ public class EmpreendedorService {
     @Autowired
 
     private EmpreendedorRepository rep;
-    public List<EmpreendedorDTO> getEmpreendedorr() {
+    public List<EmpreendedorDTO> getCarros() {
         List<EmpreendedorDTO> list = rep.findAll().stream().map(EmpreendedorDTO::create).collect(Collectors.toList());
         return list;
     }
 
-    public EmpreendedorDTO getEmpreendedorById(Long id) {
-        Optional<Empreendedor> empreendedor = rep.findById(id);
-        return empreendedor.map(EmpreendedorDTO::create).orElseThrow(() -> new ObjectNotFoundException("Empreendedor não encontrado"));
+    public EmpreendedorDTO getCarroById(Long id) {
+        Optional<Empreendedor> carro = rep.findById(id);
+        return carro.map(EmpreendedorDTO::create).orElseThrow(() -> new ObjectNotFoundException("Carro não encontrado"));
     }
 
-    
+
 
     public EmpreendedorDTO insert(Empreendedor empreendedor) {
         Assert.isNull(empreendedor.getId(),"Não foi possível inserir o registro");
@@ -35,16 +35,16 @@ public class EmpreendedorService {
     public EmpreendedorDTO update(Empreendedor empreendedor, Long id) {
         Assert.notNull(id,"Não foi possível atualizar o registro");
 
-        // Busca o empreendedor no banco de dados
+        // Busca o carro no banco de dados
         Optional<Empreendedor> optional = rep.findById(id);
         if(optional.isPresent()) {
             Empreendedor db = optional.get();
             // Copiar as propriedades
             db.setNome(empreendedor.getNome());
-            db.setBairro(empreendedor.getBairro());
-            System.out.println("Empreendedor id " + db.getId());
 
-            // Atualiza o empreendedor
+            System.out.println("Carro id " + db.getId());
+
+            // Atualiza o carro
             rep.save(db);
 
             return EmpreendedorDTO.create(db);
