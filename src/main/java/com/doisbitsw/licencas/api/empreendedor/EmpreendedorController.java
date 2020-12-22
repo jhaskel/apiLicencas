@@ -16,25 +16,16 @@ public class EmpreendedorController {
     @Autowired
     private EmpreendedorService service;
 
-
     @GetMapping()
     public ResponseEntity get() {
-        List<EmpreendedorDTO> carros = service.getEmpreendedorr();
-        return ResponseEntity.ok(carros);
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity get(@PathVariable("id") Long id) {
-        EmpreendedorDTO carro = service.getEmpreendedorById(id);
-
-        return ResponseEntity.ok(carro);
+        List<EmpreendedorDTO> contato = service.getEmpreendedorr();
+        return ResponseEntity.ok(contato);
     }
 
     @PostMapping
+    public ResponseEntity post(@RequestBody Empreendedor pontuacao) {
 
-    public ResponseEntity post(@RequestBody Empreendedor empreendedor) {
-
-        EmpreendedorDTO c = service.insert(empreendedor);
+        EmpreendedorDTO c = service.insert(pontuacao);
 
         URI location = getUri(c.getId());
         return ResponseEntity.created(location).body(c);
@@ -45,12 +36,12 @@ public class EmpreendedorController {
                 .buildAndExpand(id).toUri();
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity put(@PathVariable("id") Long id, @RequestBody Empreendedor empreendedor) {
+    @PutMapping("/{empreendedor}")
+    public ResponseEntity put(@PathVariable("empreendedor") Long empreendedor, @RequestBody Empreendedor pontuacao) {
 
-        empreendedor.setId(id);
+        pontuacao.setId(empreendedor);
 
-        EmpreendedorDTO c = service.update(empreendedor, id);
+        EmpreendedorDTO c = service.update(pontuacao, empreendedor);
 
         return c != null ?
                 ResponseEntity.ok(c) :
