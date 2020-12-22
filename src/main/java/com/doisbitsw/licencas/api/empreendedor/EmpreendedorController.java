@@ -10,7 +10,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/empreendedor")
+@RequestMapping("/api/v1/empreendedor1")
 
 public class EmpreendedorController {
     @Autowired
@@ -29,9 +29,6 @@ public class EmpreendedorController {
 
         return ResponseEntity.ok(carro);
     }
-
-
-
 
     @PostMapping
 
