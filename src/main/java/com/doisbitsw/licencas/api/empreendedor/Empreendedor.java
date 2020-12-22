@@ -29,6 +29,7 @@ public class Empreendedor {
     private String logradouro;
     private String modified;
     private String numero;
+    private String code;
     private Boolean ativo;
 
 

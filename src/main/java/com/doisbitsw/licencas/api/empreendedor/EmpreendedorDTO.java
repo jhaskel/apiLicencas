@@ -20,6 +20,7 @@ public class EmpreendedorDTO {
     private String modified;
     private String numero;
     private Boolean ativo;
+    private String code;
 
 
 
