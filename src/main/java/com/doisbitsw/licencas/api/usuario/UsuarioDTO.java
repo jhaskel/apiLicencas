@@ -11,13 +11,13 @@ public class UsuarioDTO {
     private String login;
     private String senha;
     private String urlFoto;
-    private Long cpf;
-    private Long recuperar;
+    private String cpf;
+    private String recuperar;
     private String celular;
     private String role;
     private Boolean ativo;
     private String created;
-    private Boolean modified;
+    private String modified;
 
 
 

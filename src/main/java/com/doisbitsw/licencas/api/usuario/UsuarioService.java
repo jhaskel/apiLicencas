@@ -51,29 +51,14 @@ public class UsuarioService {
         Optional<Usuario> optional = rep.findById(id);
         if(optional.isPresent()) {
             Usuario db = optional.get();
-            // Copiar as propriedades
-          //  db.setEmail(usuario.getEmail());
-            db.setLogin(usuario.getLogin());
+
             db.setNome(usuario.getNome());
             db.setSenha(usuario.getSenha());
             db.setUrlFoto(usuario.getUrlFoto());
-          //  db.setCidade(usuario.getCidade());
-            db.setBairro(usuario.getBairro());
-            db.setRua(usuario.getRua());
+           db.setCpf(usuario.getCpf());
+           db.setEmail(usuario.getEmail());
             db.setCelular(usuario.getCelular());
-            db.setNascimento(usuario.getNascimento());
-            db.setGenero(usuario.getGenero());
-            db.setDistancia(usuario.getDistancia());
-            db.setLocal(usuario.getLocal());
-            db.setLatitude(usuario.getLatitude());
-            db.setLongitude(usuario.getLongitude());
-            db.setTipo(usuario.getTipo());
-            db.setEmpresa(usuario.getEmpresa());
-            db.setAddress(usuario.getAddress());
-            db.setQuantdicas(usuario.getQuantdicas());
-            db.setQuantnoticias(usuario.getQuantnoticias());
-            db.setAtivo(usuario.getAtivo());
-            db.setLogadoem(usuario.getLogadoem());
+
 
 
 
