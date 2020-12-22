@@ -34,7 +34,7 @@ public class EmpreendedorController {
 
 
     @PostMapping
-    @Secured({ "ROLE_ADMIN" })
+
     public ResponseEntity post(@RequestBody Empreendedor empreendedor) {
 
         EmpreendedorDTO c = service.insert(empreendedor);
