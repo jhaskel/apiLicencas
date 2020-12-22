@@ -18,7 +18,6 @@ public class Empreendedor {
     private Long id;
     private String nome;
     private String email;
-    private String descricao;
     private String cpf;
     private String logradouro;
     private String numero;
@@ -28,6 +27,7 @@ public class Empreendedor {
     private String cidade;
     private String estado;
     private String celular;
+    private Boolean ativo;
     private String created;
     private String modified;
 
