@@ -26,6 +26,12 @@ public class EmpreendedorService {
     }
 
 
+    public EmpreendedorDTO getCarroByCode(String code) {
+        Optional<Empreendedor> carro = rep.findByCode(code);
+        return carro.map(EmpreendedorDTO::create).orElseThrow(() -> new ObjectNotFoundException("Carro não encontrado"));
+    }
+
+
 
     public EmpreendedorDTO insert(Empreendedor empreendedor) {
         Assert.isNull(empreendedor.getId(),"Não foi possível inserir o registro");

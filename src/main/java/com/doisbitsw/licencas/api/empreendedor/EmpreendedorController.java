@@ -29,6 +29,13 @@ public class EmpreendedorController {
         return ResponseEntity.ok(empreendedor);
     }
 
+    @GetMapping("/{code}")
+    public ResponseEntity getCode(@PathVariable("code") String code) {
+        EmpreendedorDTO empreendedor = service.getCarroByCode(code);
+
+        return ResponseEntity.ok(empreendedor);
+    }
+
 
 
     @PostMapping
