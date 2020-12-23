@@ -64,4 +64,9 @@ public class EmpreendedorService {
     public List<EmpreendedorDTO> getEmpreendedorByCode(String code) {
         return rep.findByCode(code).stream().map(EmpreendedorDTO::create).collect(Collectors.toList());
     }
+
+
+    public List<EmpreendedorDTO> getEmpreendedorByCpf(String cpf) {
+        return rep.findByCpf(cpf).stream().map(EmpreendedorDTO::create).collect(Collectors.toList());
+    }
 }

@@ -36,6 +36,13 @@ public class EmpreendedorController {
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(empreemdedors);
     }
+    @GetMapping("/cpf/{cpf}")
+    public ResponseEntity getEmpreendedorByCpf(@PathVariable("cpf") String cpf){
+        List<EmpreendedorDTO> empreemdedors = service.getEmpreendedorByCpf(cpf);
+        return empreemdedors.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(empreemdedors);
+    }
 
 
 
