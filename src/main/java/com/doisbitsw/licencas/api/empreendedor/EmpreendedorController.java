@@ -29,11 +29,12 @@ public class EmpreendedorController {
         return ResponseEntity.ok(empreendedor);
     }
 
-    @GetMapping("/{code}")
-    public ResponseEntity getCode(@PathVariable("code") String code) {
-        EmpreendedorDTO empreendedor = service.getCarroByCode(code);
-
-        return ResponseEntity.ok(empreendedor);
+    @GetMapping("/code/{code}")
+    public ResponseEntity getEmpreendedorByCode(@PathVariable("code") String code) {
+        List<EmpreendedorDTO> empreemdedors = service.getEmpreendedorByCode(code);
+        return empreemdedors.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(empreemdedors);
     }
 
 

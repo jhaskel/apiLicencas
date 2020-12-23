@@ -26,10 +26,6 @@ public class EmpreendedorService {
     }
 
 
-    public EmpreendedorDTO getCarroByCode(String code) {
-        Optional<Empreendedor> carro = rep.findByCode(code);
-        return carro.map(EmpreendedorDTO::create).orElseThrow(() -> new ObjectNotFoundException("Carro não encontrado"));
-    }
 
 
 
@@ -65,4 +61,8 @@ public class EmpreendedorService {
     }
 
 
+    public List<EmpreendedorDTO> getEmpreendedorByCode(String code) {
+        return rep.findByCode(code).stream().map(EmpreendedorDTO::create).collect(Collectors.toList());
+
+    }
 }
