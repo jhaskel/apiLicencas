@@ -22,7 +22,7 @@ public class Empreendimento {
     private String cpf;
     private String nomefantasia;
     private String matricula;
-    private String latitude;
+    private Double latitude;
     private Double longitude;
     private String logradouro;
     private String numero;
@@ -31,7 +31,7 @@ public class Empreendimento {
     private String cep;
     private String cidade;
     private String estado;
-    private Double celular;
+    private String celular;
     private String email;
     private String created;
     private String modified;
