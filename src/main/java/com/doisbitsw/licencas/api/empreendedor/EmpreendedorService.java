@@ -22,7 +22,7 @@ public class EmpreendedorService {
 
     public EmpreendedorDTO getCarroById(Long id) {
         Optional<Empreendedor> carro = rep.findById(id);
-        return carro.map(EmpreendedorDTO::create).orElseThrow(() -> new ObjectNotFoundException("Carro não encontrado"));
+        return carro.map(EmpreendedorDTO::create).orElseThrow(() -> new ObjectNotFoundException("Empreeendedor não encontrado"));
     }
 
 
@@ -44,9 +44,9 @@ public class EmpreendedorService {
             // Copiar as propriedades
             db.setNome(empreendedor.getNome());
 
-            System.out.println("Carro id " + db.getId());
+            System.out.println("Empreendedor id " + db.getId());
 
-            // Atualiza o carro
+            // Atualiza o empreendedor
             rep.save(db);
 
             return EmpreendedorDTO.create(db);
@@ -63,6 +63,5 @@ public class EmpreendedorService {
 
     public List<EmpreendedorDTO> getEmpreendedorByCode(String code) {
         return rep.findByCode(code).stream().map(EmpreendedorDTO::create).collect(Collectors.toList());
-
     }
 }
