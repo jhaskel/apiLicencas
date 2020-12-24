@@ -8,4 +8,5 @@ public interface EmpreendimentoRepository extends JpaRepository<Empreendimento, 
 
 
     List<Empreendimento> findByCode(String code);
+    List<Empreendimento> findByEmpreendedor(String empreendedor);
 }

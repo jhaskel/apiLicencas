@@ -27,8 +27,6 @@ public class EmpreendimentoService {
 
 
 
-
-
     public EmpreendimentoDTO insert(Empreendimento empreendimento) {
         Assert.isNull(empreendimento.getId(),"Não foi possível inserir o registro");
         return EmpreendimentoDTO.create(rep.save(empreendimento));
@@ -61,7 +59,12 @@ public class EmpreendimentoService {
     }
 
 
-    public List<EmpreendimentoDTO> getEmpreendedorByCode(String code) {
+    public List<EmpreendimentoDTO> getEmpreendimentoByCode(String code) {
         return rep.findByCode(code).stream().map(EmpreendimentoDTO::create).collect(Collectors.toList());
+    }
+
+
+    public List<EmpreendimentoDTO> getEmpreendimentoByEmpreendedor(String code) {
+        return rep.findByEmpreendedor(code).stream().map(EmpreendimentoDTO::create).collect(Collectors.toList());
     }
 }

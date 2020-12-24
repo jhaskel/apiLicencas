@@ -29,12 +29,21 @@ public class EmpreendimentoController {
     }
 
     @GetMapping("/code/{code}")
-    public ResponseEntity getEmpreendedorByCode(@PathVariable("code") String code) {
-        List<EmpreendimentoDTO> empreemdedors = service.getEmpreendedorByCode(code);
+    public ResponseEntity getEmpreendimentoByCode(@PathVariable("code") String code) {
+        List<EmpreendimentoDTO> empreemdedors = service.getEmpreendimentoByCode(code);
         return empreemdedors.isEmpty() ?
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(empreemdedors);
     }
+
+    @GetMapping("/empreendedor/{empreendedor}")
+    public ResponseEntity getEmpreendimentoByEmpreeendedor(@PathVariable("code") String code) {
+        List<EmpreendimentoDTO> empreemdedors = service.getEmpreendimentoByEmpreendedor(code);
+        return empreemdedors.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(empreemdedors);
+    }
+
 
 
 
