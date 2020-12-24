@@ -37,7 +37,7 @@ public class EmpreendimentoController {
     }
 
     @GetMapping("/empreendedor/{empreendedor}")
-    public ResponseEntity getEmpreendimentoByEmpreeendedor(@PathVariable("empreendedor") Long empreendedor) {
+    public ResponseEntity getEmpreendimentoByEmpreendedor(@PathVariable("empreendedor") Long empreendedor) {
         List<EmpreendimentoDTO> empreemdedors = service.getEmpreendimentoByEmpreendedor(empreendedor);
         return empreemdedors.isEmpty() ?
                 ResponseEntity.noContent().build() :
