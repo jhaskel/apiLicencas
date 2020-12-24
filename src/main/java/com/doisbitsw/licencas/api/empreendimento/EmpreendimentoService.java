@@ -64,7 +64,12 @@ public class EmpreendimentoService {
     }
 
 
-    public List<EmpreendimentoDTO> getEmpreendimentoByEmpreendedor(String code) {
-        return rep.findByEmpreendedor(code).stream().map(EmpreendimentoDTO::create).collect(Collectors.toList());
+    public List<EmpreendimentoDTO> getEmpreendimentoByEmpreendedor(Long empreendedor) {
+        return rep.findByEmpreendedor(empreendedor).stream().map(EmpreendimentoDTO::create).collect(Collectors.toList());
+    }
+
+
+    public List<EmpreendimentoDTO> getEmpreendimentoByCpf(String cpf) {
+        return rep.findByCpf(cpf).stream().map(EmpreendimentoDTO::create).collect(Collectors.toList());
     }
 }

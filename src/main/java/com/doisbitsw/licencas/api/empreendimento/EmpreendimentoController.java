@@ -37,12 +37,21 @@ public class EmpreendimentoController {
     }
 
     @GetMapping("/empreendedor/{empreendedor}")
-    public ResponseEntity getEmpreendimentoByEmpreeendedor(@PathVariable("code") String code) {
-        List<EmpreendimentoDTO> empreemdedors = service.getEmpreendimentoByEmpreendedor(code);
+    public ResponseEntity getEmpreendimentoByEmpreeendedor(@PathVariable("empreendedor") Long empreendedor) {
+        List<EmpreendimentoDTO> empreemdedors = service.getEmpreendimentoByEmpreendedor(empreendedor);
         return empreemdedors.isEmpty() ?
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(empreemdedors);
     }
+
+    @GetMapping("/cpf/{cpf}")
+    public ResponseEntity getEmpreendimentoByCpf(@PathVariable("cpf") String cpf) {
+        List<EmpreendimentoDTO> empreemdedors = service.getEmpreendimentoByCpf(cpf);
+        return empreemdedors.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(empreemdedors);
+    }
+
 
 
 
