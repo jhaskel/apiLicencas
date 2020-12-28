@@ -9,7 +9,6 @@ public class ProtocoloDTO {
     private String code;
     private Long empreendedor;
     private Long empreendimento;
-    private String caracterizacao;
     private String descricao;
     private String created;
 
