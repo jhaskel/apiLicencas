@@ -16,7 +16,8 @@ public class FinanceiroDTO {
     private String created;
     private String modified;
     //query
-    private String nome;
+    private String nomedor;
+    private String nomefas;
 
 
 

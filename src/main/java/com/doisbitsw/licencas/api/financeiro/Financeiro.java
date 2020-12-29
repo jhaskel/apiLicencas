@@ -27,6 +27,7 @@ public class Financeiro {
     private String modified;
     //query
     private String nomedor;
+    private String nomefas;
 
 }
 
