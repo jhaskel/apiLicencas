@@ -8,7 +8,7 @@ import java.util.List;
 public interface FinanceiroRepository extends JpaRepository<Financeiro, Long> {
 
 
-    @Query(value = "SELECT fin.* FROM financeiro fin  WHERE fin.code_processo = :codeProcesso", nativeQuery = true)
+   // @Query(value = "SELECT fin.* FROM financeiro fin  WHERE fin.code_processo = :codeProcesso", nativeQuery = true)
     List<Financeiro> findByCodeProcesso(String codeProcesso);
 
 }
