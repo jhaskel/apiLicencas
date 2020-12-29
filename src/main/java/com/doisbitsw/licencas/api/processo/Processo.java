@@ -41,5 +41,7 @@ public class Processo {
     private String created;
     private String modified;
     private Boolean ativo;
+    private String nomeEmpreendedor;
+    private String nomeEmpreendimento;
 }
 
