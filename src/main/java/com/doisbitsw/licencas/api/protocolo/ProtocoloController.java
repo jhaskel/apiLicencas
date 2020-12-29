@@ -43,6 +43,13 @@ public class ProtocoloController {
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(empreemdedors);
     }
+    @GetMapping("/processo/{code_processo}")
+    public ResponseEntity getProtocoloByCodeProcesso(@PathVariable("code_processo") String code_processo) {
+        List<ProtocoloDTO> empreemdedors = service.getProtocoloByCodeProcesso(code_processo);
+        return empreemdedors.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(empreemdedors);
+    }
 
 
 

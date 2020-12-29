@@ -69,4 +69,9 @@ public class ProtocoloService {
     }
 
 
+    public List<ProtocoloDTO> getProtocoloByCodeProcesso(String code_processo) {
+        return rep.findByCodeProcesso(code_processo).stream().map(ProtocoloDTO::create).collect(Collectors.toList());
+    }
+
+
 }
