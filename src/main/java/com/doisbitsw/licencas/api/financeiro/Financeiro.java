@@ -26,8 +26,18 @@ public class Financeiro {
     private String created;
     private String modified;
     //query
-    private String nomedor;
-    private String nomefas;
+    private String nome;
+    private String fase;
+    private String cpf;
+    private String celular;
+    private String logradouro;
+    private String numero;
+    private String bairro;
+    private Double quantidade;
+    private String unidade;
+    private String caracterizacao;
+    private String atividade;
+    private Boolean certidao;
 
 }
 
