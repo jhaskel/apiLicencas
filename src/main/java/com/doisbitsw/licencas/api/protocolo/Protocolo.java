@@ -17,7 +17,7 @@ public class Protocolo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String code;
-    private String code_processo;
+    private String codeProcesso;
     private Long empreendedor;
     private Long empreendimento;
     private String descricao;

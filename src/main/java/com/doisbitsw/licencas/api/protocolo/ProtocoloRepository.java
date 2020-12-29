@@ -8,7 +8,8 @@ public interface ProtocoloRepository extends JpaRepository<Protocolo, Long> {
 
 
     List<Protocolo> findByCode(String code);
+    List<Protocolo> findByCodeProcesso(String codeProcesso);
     List<Protocolo> findByEmpreendedor(Long empreendedor);
-    List<Protocolo> findByCodeProcesso(String code_processo);
+
 
 }

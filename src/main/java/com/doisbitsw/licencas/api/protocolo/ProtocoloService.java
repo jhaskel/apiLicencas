@@ -64,14 +64,16 @@ public class ProtocoloService {
     }
 
 
+    public List<ProtocoloDTO> getEmpreendimentoByCodeProcesso(String codeProcesso) {
+        return rep.findByCodeProcesso(codeProcesso).stream().map(ProtocoloDTO::create).collect(Collectors.toList());
+    }
+
+
     public List<ProtocoloDTO> getEmpreendimentoByEmpreendedor(Long empreendedor) {
         return rep.findByEmpreendedor(empreendedor).stream().map(ProtocoloDTO::create).collect(Collectors.toList());
     }
 
 
-    public List<ProtocoloDTO> getProtocoloByCodeProcesso(String code_processo) {
-        return rep.findByCodeProcesso(code_processo).stream().map(ProtocoloDTO::create).collect(Collectors.toList());
-    }
 
 
 }

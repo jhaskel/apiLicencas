@@ -36,6 +36,14 @@ public class ProtocoloController {
                 ResponseEntity.ok(empreemdedors);
     }
 
+    @GetMapping("/processo/{codeProcesso}")
+    public ResponseEntity getEmpreendimentoByCodeProcesso(@PathVariable("codeProcesso") String codeProcesso) {
+        List<ProtocoloDTO> empreemdedors = service.getEmpreendimentoByCodeProcesso(codeProcesso);
+        return empreemdedors.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(empreemdedors);
+    }
+
     @GetMapping("/empreendedor/{empreendedor}")
     public ResponseEntity getEmpreendimentoByEmpreendedor(@PathVariable("empreendedor") Long empreendedor) {
         List<ProtocoloDTO> empreemdedors = service.getEmpreendimentoByEmpreendedor(empreendedor);
@@ -43,13 +51,8 @@ public class ProtocoloController {
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(empreemdedors);
     }
-    @GetMapping("/processo/{code_processo}")
-    public ResponseEntity getProtocoloByCodeProcesso(@PathVariable("code_processo") String code_processo) {
-        List<ProtocoloDTO> empreemdedors = service.getProtocoloByCodeProcesso(code_processo);
-        return empreemdedors.isEmpty() ?
-                ResponseEntity.noContent().build() :
-                ResponseEntity.ok(empreemdedors);
-    }
+
+
 
 
 
