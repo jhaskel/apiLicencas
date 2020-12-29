@@ -8,6 +8,7 @@ public class ProtocoloDTO {
     private Long id;
     private String code;
     private String codeProcesso;
+    private String autor;
     private Long empreendedor;
     private Long empreendimento;
     private String descricao;
