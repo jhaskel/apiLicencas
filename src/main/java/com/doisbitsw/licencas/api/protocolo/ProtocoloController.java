@@ -47,7 +47,6 @@ public class ProtocoloController {
 
 
 
-
     @PostMapping
 
     public ResponseEntity post(@RequestBody Protocolo protocolo) {
