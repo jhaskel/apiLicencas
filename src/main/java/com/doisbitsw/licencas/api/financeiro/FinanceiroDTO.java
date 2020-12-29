@@ -15,6 +15,9 @@ public class FinanceiroDTO {
     private Boolean ativo;
     private String created;
     private String modified;
+    //query
+    private String nome;
+
 
 
 
