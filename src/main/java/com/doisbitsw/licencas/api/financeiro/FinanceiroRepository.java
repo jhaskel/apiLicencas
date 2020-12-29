@@ -8,8 +8,10 @@ import java.util.List;
 public interface FinanceiroRepository extends JpaRepository<Financeiro, Long> {
 
 
-    @Query(value = "SELECT fin.*, dor.nome as nomedor,dor.cpf,dor.celular,mento.logradouro,mento.numero,mento.bairro, pro.iscertidao,\n" +
-            "pro.caracterizacao,pro.quantidade, pro.atividade, fas.nome as nomefas\n" +
+    @Query(value = "SELECT fin.*, dor.nome as nome,dor.cpf as cpf, dor.celular as celular,mento.logradouro as logradouro \n" +
+            ",mento.numero as numero,mento.bairro as bairro, pro.iscertidao as certidao,\n" +
+            "pro.caracterizacao as caracterixacao ,pro.quantidade as quantidade, pro.atividade as atividade, \n" +
+            "fas.nome as fase\n" +
             " FROM financeiro fin\n" +
             "INNER JOIN processo pro ON pro.code = fin.code_processo  \n" +
             "INNER JOIN empreendimento mento ON mento.id = fin.empreendimento\n" +
