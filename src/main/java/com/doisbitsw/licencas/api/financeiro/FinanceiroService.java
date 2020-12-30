@@ -40,7 +40,11 @@ public class FinanceiroService {
         if(optional.isPresent()) {
             Financeiro db = optional.get();
             // Copiar as propriedades
+            db.setAtivo(financeiro.getAtivo());
             db.setCode(financeiro.getCode());
+            db.setCodeProcesso(financeiro.getCodeProcesso());
+            db.setValor(financeiro.getValor());
+            db.setSituacao(financeiro.getSituacao());
 
             System.out.println("Financeiro id " + db.getId());
 

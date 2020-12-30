@@ -41,6 +41,22 @@ public class ProcessoService {
             Processo db = optional.get();
             // Copiar as propriedades
             db.setAtividade(processo.getAtividade());
+            db.setStatus(processo.getStatus());
+            db.setAtivo(processo.getAtivo());
+            db.setCaracterizacao(processo.getCaracterizacao());
+            db.setClasse(processo.getClasse());
+            db.setModified(processo.getModified());
+            db.setFase(processo.getFase());
+            db.setIssecundarias(processo.getIssecundarias());
+            db.setLocal(processo.getLocal());
+            db.setObs(processo.getObs());
+            db.setPorte(processo.getPorte());
+            db.setQuantidade(processo.getQuantidade());
+            db.setUnidade(processo.getUnidade());
+            db.setPotencial(processo.getPotencial());
+            db.setValor(processo.getValor());
+
+
 
             System.out.println("Empreendimento id " + db.getId());
 
