@@ -54,6 +54,7 @@ public class ProcessoService {
             db.setQuantidade(processo.getQuantidade());
             db.setUnidade(processo.getUnidade());
             db.setPotencial(processo.getPotencial());
+            db.setTipoLicenca(processo.getTipoLicenca());
             db.setValor(processo.getValor());
 
 

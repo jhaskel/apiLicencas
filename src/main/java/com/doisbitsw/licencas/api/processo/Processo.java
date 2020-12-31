@@ -22,6 +22,7 @@ public class Processo {
     private Long empreendimento;
     private String caracterizacao;
     private String atividade;
+    private String tipoLicenca;
     private String fase;
     private Double quantidade;
     private String unidade;
@@ -36,8 +37,6 @@ public class Processo {
     private Boolean isemitida;
     private Boolean isisento;
     private Boolean issecundarias;
-    private Boolean islicenca;
-    private Boolean iscertidao;
     private String created;
     private String modified;
     private Boolean ativo;
