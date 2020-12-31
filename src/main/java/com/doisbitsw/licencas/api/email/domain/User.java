@@ -2,46 +2,55 @@ package com.doisbitsw.licencas.api.email.domain;
 
 public class User {
 	
-	private String firstName;
-	
-	private String lastName;
+	private String nome;
+	private String assunto;
+	private String email;
+	private String content;
+	private String created;
 
-	private String emailAddress;
-	private String tempo;
+
 
 	public User(){
 		
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getAssunto() {
+		return assunto;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setAssunto(String assunto) {
+		this.assunto = assunto;
 	}
 
-	public String getEmailAddress() {
-		return emailAddress;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setEmailAddress(String emailAddress) {
-		this.emailAddress = emailAddress;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getTempo() {
-		return tempo;
+	public String getContent() {
+		return content;
 	}
 
-	public void setTempo(String tempo) {
-		this.tempo = tempo;
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public String getCreated() {
+		return created;
+	}
+
+	public void setCreated(String created) {
+		this.created = created;
 	}
 }

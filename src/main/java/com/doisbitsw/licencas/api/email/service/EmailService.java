@@ -24,7 +24,7 @@ public class EmailService {
 	public void sendMail(User user) throws MessagingException {
 		javax.mail.internet.MimeMessage mimeMessage = javaMailSender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(mimeMessage);
-		helper.setSubject("Welcome " + user.getFirstName());
+		helper.setSubject("Olá " + user.getNome());
 
 		String html = "<!doctype html>\n" +
 				"<html lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\"\n" +
@@ -37,13 +37,17 @@ public class EmailService {
 				"    <title>Email</title>\n" +
 				"</head>\n" +
 				"<body>\n" +
-				"<div>Welcome meu <b>" + user.getFirstName() + "</b></div>\n" +
+				"<div>Olá <b>" + user.getNome() + "</b></div>\n" +
 				"\n" +
-				"<div> Your username is <b>" + user.getLastName() + "</b></div>\n" +
+				"<div>  <h1>" + user.getAssunto() + "</h1></div>\n" +
+				"\n" +
+				"<div>  <h4>" + user.getContent() + "</h4></div>\n" +
+				"\n" +
+				"<div> em <b>" + user.getCreated() + "</b></div>\n" +
 				"</body>\n" +
 				"</html>\n";
 		helper.setText(html, true);
-		helper.setTo(user.getEmailAddress());
+		helper.setTo(user.getEmail());
 		javaMailSender.send(mimeMessage);
 	}
 }
