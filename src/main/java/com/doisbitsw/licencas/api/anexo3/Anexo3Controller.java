@@ -1,8 +1,7 @@
-package com.doisbitsw.licencas.api.licencas;
+package com.doisbitsw.licencas.api.anexo3;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -10,39 +9,46 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/licenca")
-public class LicencaController {
+@RequestMapping("/api/v1/anexo3")
+public class Anexo3Controller {
     @Autowired
-    private LicencaService service;
+    private Anexo3Service service;
 
 
     @GetMapping()
     public ResponseEntity get() {
-        List<LicencaDTO> carros = service.getCarros();
-        return ResponseEntity.ok(carros);
+        List<Anexo3DTO> empreendimentos = service.getCarros();
+        return ResponseEntity.ok(empreendimentos);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity get(@PathVariable("id") Long id) {
-        LicencaDTO carro = service.getCarroById(id);
+        Anexo3DTO empreendimento = service.getCarroById(id);
 
-        return ResponseEntity.ok(carro);
+        return ResponseEntity.ok(empreendimento);
     }
 
-    @GetMapping("/processo/{processo}")
-    public ResponseEntity getCarrosByProcesso(@PathVariable("processo") String processo) {
-        List<LicencaDTO> carros = service.getCarrosByProcesso(processo);
-        return carros.isEmpty() ?
+
+
+    @GetMapping("/code/{code}")
+    public ResponseEntity getEmpreendimentoByCode(@PathVariable("code") String code) {
+        List<Anexo3DTO> empreemdedors = service.getEmpreendimentoByCode(code);
+        return empreemdedors.isEmpty() ?
                 ResponseEntity.noContent().build() :
-                ResponseEntity.ok(carros);
+                ResponseEntity.ok(empreemdedors);
     }
+
+
+
+
+
 
 
     @PostMapping
 
-    public ResponseEntity post(@RequestBody Licenca licenca) {
+    public ResponseEntity post(@RequestBody Anexo3 anexo3) {
 
-        LicencaDTO c = service.insert(licenca);
+        Anexo3DTO c = service.insert(anexo3);
 
         URI location = getUri(c.getId());
         return ResponseEntity.created(location).body(c);
@@ -54,11 +60,11 @@ public class LicencaController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity put(@PathVariable("id") Long id, @RequestBody Licenca licenca) {
+    public ResponseEntity put(@PathVariable("id") Long id, @RequestBody Anexo3 anexo3) {
 
-        licenca.setId(id);
+        anexo3.setId(id);
 
-        LicencaDTO c = service.update(licenca, id);
+        Anexo3DTO c = service.update(anexo3, id);
 
         return c != null ?
                 ResponseEntity.ok(c) :

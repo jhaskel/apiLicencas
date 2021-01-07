@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface LicencaRepository extends JpaRepository<Licenca, Long> {
 
-    List<Licenca> findByTipo(String tipo);
+    List<Licenca> findByProcesso(String processo);
 }

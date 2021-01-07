@@ -25,8 +25,8 @@ public class LicencaService {
         return carro.map(LicencaDTO::create).orElseThrow(() -> new ObjectNotFoundException("Carro não encontrado"));
     }
 
-    public List<LicencaDTO> getCarrosByTipo(String tipo) {
-        return rep.findByTipo(tipo).stream().map(LicencaDTO::create).collect(Collectors.toList());
+    public List<LicencaDTO> getCarrosByProcesso(String processo) {
+        return rep.findByProcesso(processo).stream().map(LicencaDTO::create).collect(Collectors.toList());
     }
 
     public LicencaDTO insert(Licenca licenca) {
@@ -42,8 +42,8 @@ public class LicencaService {
         if(optional.isPresent()) {
             Licenca db = optional.get();
             // Copiar as propriedades
-            db.setNome(licenca.getNome());
-            db.setTipo(licenca.getTipo());
+            db.setCode(licenca.getCode());
+            db.setTipoLicenca(licenca.getTipoLicenca());
             System.out.println("Carro id " + db.getId());
 
             // Atualiza o carro
