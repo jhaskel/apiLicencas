@@ -21,7 +21,7 @@ public class Anexo3DTO {
     private Boolean aua;
     private Boolean auap;
     private Boolean auas;
-    private Boolean porteDiferenciado;
+    private Boolean auam;
     private Boolean ativo;
     private Boolean calculoDiferenciado;
 
