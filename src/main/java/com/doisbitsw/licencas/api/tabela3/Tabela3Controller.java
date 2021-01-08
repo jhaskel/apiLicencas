@@ -30,9 +30,9 @@ public class Tabela3Controller {
 
 
 
-    @GetMapping("/licenca/{licenca}/classe/{classe}")
-    public ResponseEntity getEmpreendimentoByLicenca(@PathVariable("licenca") String licenca,@PathVariable("classe") String classe) {
-        List<Tabela3DTO> empreemdedors = service.getEmpreendimentoByLicenca(licenca,classe);
+    @GetMapping("/licenca/{tipoLicenca}/classe/{classe}")
+    public ResponseEntity getEmpreendimentoByLicenca(@PathVariable("tipoLicenca") String tipoLicenca,@PathVariable("classe") String classe) {
+        List<Tabela3DTO> empreemdedors = service.getEmpreendimentoByLicenca(tipoLicenca,classe);
         return empreemdedors.isEmpty() ?
                 ResponseEntity.noContent().build() :
                 ResponseEntity.ok(empreemdedors);
