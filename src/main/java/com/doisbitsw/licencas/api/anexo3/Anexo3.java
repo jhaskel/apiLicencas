@@ -17,6 +17,7 @@ public class Anexo3 {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String code;
+    private String nome;
     private String potPoluidorGeral;
     private Double porteMinimo;
     private Double portePequeno;

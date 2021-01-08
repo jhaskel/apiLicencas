@@ -7,6 +7,7 @@ import org.modelmapper.ModelMapper;
 public class Anexo3DTO {
     private Long id;
     private String code;
+    private String nome;
     private String potPoluidorGeral;
     private Double porteMinimo;
     private Double portePequeno;
