@@ -20,7 +20,7 @@ public class Anexo3 {
     private String nome;
     private String potPoluidorGeral;
     private Double porteMinimo;
-    private Double portePequeno;
+    private Double portepequeno;
     private String estudoP;
     private Double porteMedio;
     private String estudoM;
