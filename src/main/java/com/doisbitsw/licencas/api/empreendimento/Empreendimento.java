@@ -36,6 +36,7 @@ public class Empreendimento {
     private String created;
     private String modified;
     private Boolean ativo;
+    private String local;
 
 
 
