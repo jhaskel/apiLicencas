@@ -10,6 +10,7 @@ public class AnalistaDTO {
     private String conselho;
     private String registro;
     private String titulo;
+    private Boolean ativo;
 
     public static AnalistaDTO create(Analista analista) {
         ModelMapper modelMapper = new ModelMapper();
