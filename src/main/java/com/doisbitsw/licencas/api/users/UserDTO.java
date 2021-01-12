@@ -25,6 +25,7 @@ public class UserDTO {
     private Boolean ativo;
     private String created;
     private String modified;
+    private String nivel;
     // token jwt
     private String token;
     private List<String> roles;

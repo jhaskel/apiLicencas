@@ -27,6 +27,7 @@ public class User implements UserDetails {
     private Boolean ativo;
     private String created;
     private String modified;
+    private String nivel;
 
 
 

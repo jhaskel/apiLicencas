@@ -18,6 +18,7 @@ public class UsuarioDTO {
     private Boolean ativo;
     private String created;
     private String modified;
+    private String nivel;
 
 
 
