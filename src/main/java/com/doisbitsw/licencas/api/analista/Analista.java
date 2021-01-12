@@ -20,6 +20,8 @@ public class Analista {
     private String conselho;
     private String registro;
     private String titulo;
+    private String nome;
+    private String email;
     private Boolean ativo;
 }
 

@@ -10,6 +10,8 @@ public class AnalistaDTO {
     private String conselho;
     private String registro;
     private String titulo;
+    private String nome;
+    private String email;
     private Boolean ativo;
 
     public static AnalistaDTO create(Analista analista) {
