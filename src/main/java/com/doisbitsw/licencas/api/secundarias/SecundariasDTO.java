@@ -8,6 +8,7 @@ public class SecundariasDTO {
     private Long id;
     private Long processo;
     private String caracterizacao;
+    private String atividade;
     private Double quantidade;
     private String unidade;
     private String porte;
