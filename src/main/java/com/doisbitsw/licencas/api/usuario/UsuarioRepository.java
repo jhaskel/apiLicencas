@@ -18,6 +18,10 @@ public interface UsuarioRepository extends JpaRepository<Usuario,Long> {
     List<Usuario> findTesteByEmail(String email);
 
 
+    @Query(value = "SELECT * from user where nivel = :nivel",nativeQuery = true)
+    List<Usuario> findTesteByNivel(String nivel);
+
+
     @Query(value = "SELECT  quantnoticias  FROM user WHERE  id = :usuario", nativeQuery = true)
     double QuantNoticia(Long usuario);
 

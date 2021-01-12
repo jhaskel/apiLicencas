@@ -88,4 +88,9 @@ public class UsuarioService {
     }
 
 
+    public List<UsuarioDTO> getTesteByNivel(String nivel) {
+        return rep.findTesteByNivel(nivel).stream().map(UsuarioDTO::create).collect(Collectors.toList());
+    }
+
+
 }

@@ -42,6 +42,14 @@ public class UsuarioController {
                 ResponseEntity.ok(coletando);
     }
 
+    @GetMapping("/nivel/{nivel}")
+    public ResponseEntity getColetandoByNivel(@PathVariable("nivel") String nivel) {
+        List<UsuarioDTO> coletando = service.getTesteByNivel(nivel);
+        return coletando.isEmpty() ?
+                ResponseEntity.noContent().build() :
+                ResponseEntity.ok(coletando);
+    }
+
 
 
     @GetMapping("/quantnoticia/{usuario}")
