@@ -6,7 +6,7 @@ import org.modelmapper.ModelMapper;
 @Data
 public class SecundariasDTO {
     private Long id;
-    private Long processo;
+    private String processo;
     private String caracterizacao;
     private String atividade;
     private Double quantidade;

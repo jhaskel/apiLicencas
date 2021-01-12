@@ -16,7 +16,7 @@ public class Secundarias {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long processo;
+    private String processo;
     private String caracterizacao;
     private String atividade;
     private Double quantidade;
