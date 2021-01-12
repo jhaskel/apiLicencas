@@ -6,6 +6,7 @@ import org.modelmapper.ModelMapper;
 @Data
 public class AnalistaDTO {
     private Long id;
+    private Long user;
     private String conselho;
     private String registro;
     private String titulo;

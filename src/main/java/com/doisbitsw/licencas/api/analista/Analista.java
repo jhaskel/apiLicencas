@@ -16,6 +16,7 @@ public class Analista {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Long user;
     private String conselho;
     private String registro;
     private String titulo;
