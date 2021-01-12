@@ -31,7 +31,7 @@ public class SecundariasController {
 
 
     @GetMapping("/processo/{processo}")
-    public ResponseEntity getEmpreendimentoByProcesso(@PathVariable("processo") Long processo) {
+    public ResponseEntity getEmpreendimentoByProcesso(@PathVariable("processo") String processo) {
         List<SecundariasDTO> empreemdedors = service.getEmpreendimentoByProcesso(processo);
         return empreemdedors.isEmpty() ?
                 ResponseEntity.noContent().build() :

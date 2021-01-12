@@ -8,6 +8,6 @@ public interface SecundariasRepository extends JpaRepository<Secundarias, Long> 
 
 
 
-    List<Secundarias> findByProcesso(Long empreendedor);
+    List<Secundarias> findByProcesso(String empreendedor);
 
 }

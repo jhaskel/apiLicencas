@@ -61,7 +61,7 @@ public class SecundariasService {
 
 
 
-    public List<SecundariasDTO> getEmpreendimentoByProcesso(Long processo) {
+    public List<SecundariasDTO> getEmpreendimentoByProcesso(String processo) {
         return rep.findByProcesso(processo).stream().map(SecundariasDTO::create).collect(Collectors.toList());
     }
 
